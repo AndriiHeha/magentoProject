@@ -1,34 +1,24 @@
 package com.mainacad.magento.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import sun.rmi.runtime.Log;
+import org.testng.Assert;
 
 public class HomePage extends BasePage {
 
-    //*********Constructor*********
-    public HomePage (WebDriver driver) {
-        super(driver);
-    }
-
-    //*********Page Variables*********
-    String baseURL = "http://magento.mainacad.com//";
-
     //*********Web Elements*********
-    By signInButtonBy = By.className("btnSignIn");
+    private static By accountButtonBy = By.xpath("//*[@id=\"header\"]/div/div[2]/a[3]/span[2]");
+    private static By registerBy = By.linkText("Register");
 
+    //*********Constructor*********
+    public HomePage () {
+        Assert.assertEquals("Madison Island", driver.getTitle());
+    }
 
     //*********Page Methods*********
-    //Go to Homepage
-    public HomePage magentoHome (){
-        driver.get(baseURL);
-        return this;
-    }
-
-    //Go to LoginPage
-    public LoginPage goToLoginPage (){
-        click(signInButtonBy);
-        return new LoginPage(driver);
+    //Go to Registration Page
+    public RegistrationPage goToRegistrationPage (){
+        driver.findElement(accountButtonBy).click();
+        driver.findElement(registerBy).click();
+        return new RegistrationPage();
     }
 }

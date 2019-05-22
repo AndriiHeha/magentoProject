@@ -8,8 +8,8 @@ import org.testng.Assert;
 public class LoginPage extends BasePage{
 
     //*********Constructor*********
-    public LoginPage(WebDriver driver) {
-        super(driver);
+    public LoginPage() {
+
     }
 
     //*********Web Elements*********
@@ -20,7 +20,7 @@ public class LoginPage extends BasePage{
     By errorMessagePasswordBy = By.xpath("//*[@id=\"loginForm\"]/div[2]/div/div ");
 
     //*********Page Methods*********
-
+/*
     public LoginPage loginToN11 (String username, String password){
         //Enter Username(Email)
         writeText(usernameBy,username);
@@ -42,4 +42,5 @@ public class LoginPage extends BasePage{
         assertEquals(errorMessagePasswordBy, expectedText);
         return this;
     }
+    */
 }
