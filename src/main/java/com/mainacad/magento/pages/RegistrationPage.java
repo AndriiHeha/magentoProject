@@ -18,11 +18,19 @@ public class RegistrationPage extends BasePage{
     public RegistrationPage() {
         Assert.assertEquals("Create New Customer Account", driver.getTitle());
     }
-
-
+    //********Registration page Set fields Methods**********
     public RegistrationPage setFirstName(String firstName){
         driver.findElement(regFirstNameField).sendKeys(firstName);
         return this;
     }
+    public RegistrationPage setLastName(String lastName){
+        driver.findElement(regLastNameField).sendKeys(lastName);
+        return this;
+    }
+    public RegistrationPage setEmailAddress(String emailAddress){
+        driver.findElement(regEmailAddressField).sendKeys(emailAddress);
+        return this;
+    }
+
 }
 
