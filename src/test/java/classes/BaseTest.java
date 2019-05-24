@@ -15,14 +15,14 @@ public class BaseTest {
         WebDriver driver = new ChromeDriver();
         //Maximize Window
         driver.manage().window().maximize();
-        driver.get("http://magento.mainacad.com//");
+        driver.get("http://magento.mainacad.com/");
 
         BasePage.setDriver(driver);
     }
-    @AfterMethod
-    public void teardown() {
-        if (BasePage.getDriver() != null) {
-            BasePage.getDriver().close();
-        }
-    }
+//    @AfterMethod
+//    public void teardown() {
+//        if (BasePage.getDriver() != null) {
+//            BasePage.getDriver().close();
+//        }
+//    }
 }

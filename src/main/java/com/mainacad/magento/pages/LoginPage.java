@@ -1,46 +1,33 @@
 package com.mainacad.magento.pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class LoginPage extends BasePage{
+    //*********Web Elements*********
+    private static By userLoginName = By.id("email");
+    private static By userPassword = By.id("pass");
+    private static By loginButton = By.name("send");
+    private static By myDashBoard = By.className("page-title");
+    private static By helloUser = By.className("hello");
 
     //*********Constructor*********
-    public LoginPage() {
-
+    public LoginPage () {
+        Assert.assertEquals("Customer Login", driver.getTitle());
     }
-
-    //*********Web Elements*********
-    By usernameBy = By.id("email");
-    By passwordBy = By.id("password");
-    By loginButtonBy = By.id("loginButton");
-    By errorMessageUsernameBy = By.xpath("//*[@id=\"loginForm\"]/div[1]/div/div");
-    By errorMessagePasswordBy = By.xpath("//*[@id=\"loginForm\"]/div[2]/div/div ");
-
     //*********Page Methods*********
-/*
-    public LoginPage loginToN11 (String username, String password){
-        //Enter Username(Email)
-        writeText(usernameBy,username);
-        //Enter Password
-        writeText(passwordBy, password);
-        //Click Login Button
-        click(loginButtonBy);
+    public LoginPage userLogin(String userLogin, String userPass){
+        driver.findElement(userLoginName).sendKeys(userLogin);
+        driver.findElement(userPassword).sendKeys(userPass);
+        driver.findElement(loginButton).click();
+        return this;
+    }
+    public LoginPage checkIfUserLogedIn(){
+        driver.findElement(myDashBoard).isDisplayed();
+        driver.findElement(helloUser).isDisplayed();
         return this;
     }
 
-    //Verify Username Condition
-    public LoginPage verifyLoginUserName (String expectedText) {
-        assertEquals(errorMessageUsernameBy, expectedText);
-        return this;
-    }
 
-    //Verify Password Condition
-    public LoginPage verifyLoginPassword (String expectedText) {
-        assertEquals(errorMessagePasswordBy, expectedText);
-        return this;
-    }
-    */
+
 }
