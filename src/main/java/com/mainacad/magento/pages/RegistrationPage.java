@@ -74,8 +74,5 @@ public class RegistrationPage extends BasePage {
         return this;
     }
 
-
-
-
 }
 

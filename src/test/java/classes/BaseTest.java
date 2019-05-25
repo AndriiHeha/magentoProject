@@ -19,10 +19,10 @@ public class BaseTest {
 
         BasePage.setDriver(driver);
     }
-//    @AfterMethod
-//    public void teardown() {
-//        if (BasePage.getDriver() != null) {
-//            BasePage.getDriver().close();
-//        }
-//    }
+   @AfterMethod
+    public void teardown() {
+       if (BasePage.getDriver() != null) {
+           BasePage.getDriver().close();
+        }
+    }
 }

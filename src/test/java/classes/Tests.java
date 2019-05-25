@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class Tests extends BaseTest {
 
-    private static String firstName = "test6";
-    private static String lastName = "test6";
-    private static String emailAddress = "test6@test.com";
+    private static String firstName = "test7";
+    private static String lastName = "test7";
+    private static String emailAddress = "test7@test.com";
     private static String userPassword = "111111";
     private static String userPasswordConfirm = "111111";
 
@@ -45,7 +45,7 @@ public class Tests extends BaseTest {
     }
     @Test (priority = 5)
     //***********Go to login page, login and check if user loged in**********
-    public void goToLoginPage() throws InterruptedException {
+    public void goToLoginPage(){
         new HomePage().goToLoginPage()
                 .userLogin(emailAddress,userPassword)
                 .checkIfUserLogedIn(firstName, lastName);
