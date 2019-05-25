@@ -6,9 +6,9 @@ import org.testng.annotations.Test;
 
 public class Tests extends BaseTest {
 
-    private static String firstName = "test7";
-    private static String lastName = "test7";
-    private static String emailAddress = "test7@test.com";
+    private static String firstName = "test8";
+    private static String lastName = "test8";
+    private static String emailAddress = "test8@test.com";
     private static String userPassword = "111111";
     private static String userPasswordConfirm = "111111";
 
