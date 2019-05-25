@@ -24,15 +24,14 @@ public class HomePage extends BasePage {
         return new RegistrationPage();
     }
 
-    //Go To DashBoard page
+    //Go To My DashBoard page
     public MyDashboardPage goToMyDashboardPage() {
-
         return new MyDashboardPage();
     }
 
     //Go To Login Page
     public LoginPage goToLoginPage() {
-        driver.findElement(accountButtonBy).click();
+       driver.findElement(accountButtonBy).click();
         driver.findElement(loginBy).click();
         return new LoginPage();
     }
