@@ -1,6 +1,7 @@
 package com.mainacad.magento.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 
 public class HomePage extends BasePage {
@@ -18,9 +19,15 @@ public class HomePage extends BasePage {
 
     //*********Page Methods*********
     //Go to Registration Page
-    public RegistrationPage goToRegistrationPage() {
-        driver.findElement(accountButtonBy).click();
-        driver.findElement(registerBy).click();
+    public RegistrationPage goToRegistrationPage() throws InterruptedException {
+        WebElement elementAccountButton = driver.findElement(accountButtonBy);
+        BasePage.highlightElement(elementAccountButton);
+        elementAccountButton.click();
+
+        WebElement elementRegisterButton = driver.findElement(registerBy);
+        BasePage.highlightElement(elementRegisterButton);
+        elementRegisterButton.click();
+
         return new RegistrationPage();
     }
 
@@ -30,9 +37,13 @@ public class HomePage extends BasePage {
     }
 
     //Go To Login Page
-    public LoginPage goToLoginPage() {
-       driver.findElement(accountButtonBy).click();
+    public LoginPage goToLoginPage() throws InterruptedException {
+        WebElement elementAccountButton = driver.findElement(accountButtonBy);
+        BasePage.highlightElement(elementAccountButton);
+        elementAccountButton.click();
+
         driver.findElement(loginBy).click();
+
         return new LoginPage();
     }
 }

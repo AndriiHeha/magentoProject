@@ -19,6 +19,7 @@ public class BaseTest {
 
         BasePage.setDriver(driver);
     }
+
    @AfterMethod
     public void teardown() {
        if (BasePage.getDriver() != null) {
