@@ -1,14 +1,16 @@
 package classes;
 
+import com.mainacad.magento.pages.BasePage;
 import com.mainacad.magento.pages.HomePage;
 import com.mainacad.magento.pages.MyDashboardPage;
 import org.testng.annotations.Test;
 
+
 public class Tests extends BaseTest {
 
-    private static String firstName = "test11";
-    private static String lastName = "test11";
-    private static String emailAddress = "test11@test.com";
+    private static String firstName = "Andrii";
+    private static String lastName = "Heha";
+    private static String emailAddress = "andriiHeha@test.com";
     private static String userPassword = "111111";
     private static String userPasswordConfirm = "111111";
 
