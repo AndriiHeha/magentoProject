@@ -9,7 +9,7 @@ import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setup() {
         //Create a Chrome driver. All test classes use this.
         WebDriverManager.chromedriver().setup();
@@ -21,7 +21,7 @@ public class BaseTest {
         BasePage.setDriver(driver);
     }
 
-   @AfterMethod
+   @AfterMethod(alwaysRun = true)
     public void teardown() {
        if (BasePage.getDriver() != null) {
            BasePage.getDriver().close();

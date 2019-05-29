@@ -10,10 +10,8 @@ public class BasePage {
     //protected static WebDriver driver;
 
     protected final static ThreadLocal<WebDriver> DRIVER = new ThreadLocal<WebDriver>();
-
     protected static WebDriverWait wait;
     private static WebElement highlitedElem;
-
 
     public static WebDriver getDriver() {
         return DRIVER.get();

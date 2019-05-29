@@ -4,11 +4,21 @@ package classes;
         import com.mainacad.magento.pages.MyDashboardPage;
         import org.testng.annotations.Test;
 
+        import java.util.Random;
+
 public class Tests extends BaseTest {
 
-    private static String firstName = "test11";
-    private static String lastName = "test11";
-    private static String emailAddress = "test11@test.com";
+    public static int getRandomNumberString() {
+        // It will generate 6 digit random Number.
+        // from 0 to 999999
+        Random rnd = new Random();
+        int number = rnd.nextInt(999999);
+        return number;
+    }
+
+    private static String firstName = "test"+getRandomNumberString();
+    private static String lastName = "test"+getRandomNumberString();
+    private static String emailAddress = "test"+getRandomNumberString()+"@test.com";
     private static String userPassword = "111111";
     private static String userPasswordConfirm = "111111";
 
