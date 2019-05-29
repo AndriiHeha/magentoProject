@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class BaseTest {
+
     @BeforeMethod
     public void setup() {
         //Create a Chrome driver. All test classes use this.

@@ -14,17 +14,17 @@ public class HomePage extends BasePage {
     //*********Constructor*********
     public HomePage() {
 
-        Assert.assertEquals("Madison Island", driver.getTitle());
+        Assert.assertEquals("Madison Island", getDriver().getTitle());
     }
 
     //*********Page Methods*********
     //Go to Registration Page
     public RegistrationPage goToRegistrationPage() throws InterruptedException {
-        WebElement elementAccountButton = driver.findElement(accountButtonBy);
+        WebElement elementAccountButton = getDriver().findElement(accountButtonBy);
         BasePage.highlightElement(elementAccountButton);
         elementAccountButton.click();
 
-        WebElement elementRegisterButton = driver.findElement(registerBy);
+        WebElement elementRegisterButton = getDriver().findElement(registerBy);
         BasePage.highlightElement(elementRegisterButton);
         elementRegisterButton.click();
 
@@ -38,11 +38,11 @@ public class HomePage extends BasePage {
 
     //Go To Login Page
     public LoginPage goToLoginPage() throws InterruptedException {
-        WebElement elementAccountButton = driver.findElement(accountButtonBy);
+        WebElement elementAccountButton = getDriver().findElement(accountButtonBy);
         BasePage.highlightElement(elementAccountButton);
         elementAccountButton.click();
 
-        driver.findElement(loginBy).click();
+        getDriver().findElement(loginBy).click();
 
         return new LoginPage();
     }

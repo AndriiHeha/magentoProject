@@ -12,14 +12,14 @@ public class MyDashboardPage extends BasePage {
     //*********Constructor*********
     public MyDashboardPage() {
 
-        Assert.assertEquals("My Account", driver.getTitle());
+        Assert.assertEquals("My Account", getDriver().getTitle());
     }
 
     public MyDashboardPage checkNavigationOnMyDashboard(String firstName, String lastName) {
-        driver.findElement(myDashBoard).isDisplayed();
-        driver.findElement(helloUser).isDisplayed();
-        Assert.assertEquals("Thank you for registering with Madison Island.", driver.findElement(successRegistrationMsg).getText());
-        Assert.assertEquals("Hello, " + firstName + " " + lastName + "!", driver.findElement(helloUser).getText());
+        getDriver().findElement(myDashBoard).isDisplayed();
+        getDriver().findElement(helloUser).isDisplayed();
+        Assert.assertEquals("Thank you for registering with Madison Island.", getDriver().findElement(successRegistrationMsg).getText());
+        Assert.assertEquals("Hello, " + firstName + " " + lastName + "!", getDriver().findElement(helloUser).getText());
         return this;
     }
 }

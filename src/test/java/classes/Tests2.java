@@ -1,10 +1,10 @@
 package classes;
 
-        import com.mainacad.magento.pages.HomePage;
-        import com.mainacad.magento.pages.MyDashboardPage;
-        import org.testng.annotations.Test;
+import com.mainacad.magento.pages.HomePage;
+import com.mainacad.magento.pages.MyDashboardPage;
+import org.testng.annotations.Test;
 
-public class Tests extends BaseTest {
+public class Tests2 extends BaseTest {
 
     private static String firstName = "test11";
     private static String lastName = "test11";

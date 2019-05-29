@@ -57,6 +57,7 @@
                             <value>${project.build.directory}/allure-results</value>
                         </property>
                     </systemProperties>
+                    <suiteXmlFiles>yourSuite.xml</suiteXmlFiles>
                 </configuration>
                 <dependencies>
                     <dependency>

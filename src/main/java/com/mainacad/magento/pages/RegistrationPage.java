@@ -23,54 +23,54 @@ public class RegistrationPage extends BasePage {
 
     //*********Constructor*********
     public RegistrationPage() {
-        Assert.assertEquals("Create New Customer Account", driver.getTitle());
+        Assert.assertEquals("Create New Customer Account", getDriver().getTitle());
     }
 
     //********Methods for checking if fields are present on Registration Page***********
     public RegistrationPage isFieldsEnableOnRegistrationForm() {
-        driver.findElement(regFirstNameField).isEnabled();
-        driver.findElement(regLastNameField).isEnabled();
-        driver.findElement(regEmailAddressField).isEnabled();
-        driver.findElement(regPasswordField).isEnabled();
-        driver.findElement(regConfirmPasswordField).isEnabled();
-        driver.findElement(regIsSubscribeCheckBox).isEnabled();
+        getDriver().findElement(regFirstNameField).isEnabled();
+        getDriver().findElement(regLastNameField).isEnabled();
+        getDriver().findElement(regEmailAddressField).isEnabled();
+        getDriver().findElement(regPasswordField).isEnabled();
+        getDriver().findElement(regConfirmPasswordField).isEnabled();
+        getDriver().findElement(regIsSubscribeCheckBox).isEnabled();
         return this;
     }
     public RegistrationPage isLoginButtonEnable(){
-        driver.findElement(loginButton).isEnabled();
+        getDriver().findElement(loginButton).isEnabled();
         return this;
     }
     //******Click Back button on Registration page Method********
     public RegistrationPage clickBackButton() {
-        driver.findElement(backButton).click();
+        getDriver().findElement(backButton).click();
         return this;
     }
     //********Required field message is displayed Methods********
     public RegistrationPage isRequiredMessageForFields(){
-        driver.findElement(requiredFieldFirstName).isDisplayed();
-        driver.findElement(requiredFieldLastName).isDisplayed();
-        driver.findElement(requiredEmailAddress).isDisplayed();
-        driver.findElement(requiredPassword).isDisplayed();
-        driver.findElement(requiredConfirmPassword).isDisplayed();
+        getDriver().findElement(requiredFieldFirstName).isDisplayed();
+        getDriver().findElement(requiredFieldLastName).isDisplayed();
+        getDriver().findElement(requiredEmailAddress).isDisplayed();
+        getDriver().findElement(requiredPassword).isDisplayed();
+        getDriver().findElement(requiredConfirmPassword).isDisplayed();
         return this;
     }
     //********Create Account on Registration page Methods**********
     public RegistrationPage createAccount(String firstName, String lastName, String emailAddress, String userPassword, String userPassConfirm ) {
-        driver.findElement(regFirstNameField).sendKeys(firstName);
-        driver.findElement(regLastNameField).sendKeys(lastName);
-        driver.findElement(regEmailAddressField).sendKeys(emailAddress);
-        driver.findElement(regPasswordField).sendKeys(userPassword);
-        driver.findElement(regConfirmPasswordField).sendKeys(userPassConfirm);
+        getDriver().findElement(regFirstNameField).sendKeys(firstName);
+        getDriver().findElement(regLastNameField).sendKeys(lastName);
+        getDriver().findElement(regEmailAddressField).sendKeys(emailAddress);
+        getDriver().findElement(regPasswordField).sendKeys(userPassword);
+        getDriver().findElement(regConfirmPasswordField).sendKeys(userPassConfirm);
         return this;
     }
     //****************Check Subscriber Check Box********************
     public RegistrationPage checkIsSubscribeChekbox() {
-        driver.findElement(regIsSubscribeCheckBox).click();
+        getDriver().findElement(regIsSubscribeCheckBox).click();
         return this;
         //****************Click Registration button*********************
     }
     public RegistrationPage clickRegistrationButton() {
-        driver.findElement(regRegisterButton).click();
+        getDriver().findElement(regRegisterButton).click();
         return this;
     }
 
